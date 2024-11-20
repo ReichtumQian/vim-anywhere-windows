@@ -9,12 +9,7 @@ $VimPath = "neovide.exe"
 $TempFile = "$env:LOCALAPPDATA\vim-anywhere"
 $ClipboardContent = Get-Clipboard
 
-if (-not [string]::IsNullOrWhiteSpace($ClipboardContent)) {
-    Set-Content -Path $TempFile -Value $ClipboardContent
-} else {
-    Write-Error "No content in clipboard to write to temporary file."
-    exit 1
-}
+Set-Content -Path $TempFile -Value $ClipboardContent
 
 # Step 3: Find Neovim executable path
 

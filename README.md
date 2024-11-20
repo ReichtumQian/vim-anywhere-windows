@@ -17,9 +17,9 @@ This repository is an updated version of [rahuliyer95's version](https://github.
 
 ## How to use
 
-1. (Optional) Select the texts you want to edit.
+1. (Optional) Select the text you want to edit.
 2. Press `Ctrl + Alt + V` to open your editor and paste the selected text.
-3. Edit the text and save the file.
-4. The edited text will be copied to the clipboard.
+3. Edit the text and save the changes.
+4. The edited text will be automatically copied to the clipboard.
 
 

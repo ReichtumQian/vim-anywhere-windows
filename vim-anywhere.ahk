@@ -2,6 +2,7 @@
 
 ^!V:: ; Ctrl + Alt + V
 {
+  A_Clipboard := ""
   Send("^c")
   try{
     Run '"powershell.exe" "-WindowStyle" "Hidden" ".\run.ps1" '
