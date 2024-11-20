@@ -1,6 +1,15 @@
 
 $VimPath = "neovide.exe"
 
+function Get-ContentWithoutTrailingNewline {
+    param (
+        [string]$Path
+    )
+    $content = Get-Content -Path $Path -Raw
+    $trimmedContent = $content.TrimEnd("`r", "`n")
+    return $trimmedContent
+}
+
 # Step 1: Copy selected content to clipboard
 # Assuming the content is already in the clipboard
 # If not, you might need to use a tool or method to copy it
@@ -23,7 +32,7 @@ Start-Process -Wait -FilePath "$VimPath" -ArgumentList "$TempFile"
 
 # Step 5: After Neovim closes, copy edited content back to clipboard
 if (Test-Path -Path "$TempFile") {
-    $EditedContent = Get-Content "$TempFile" -Raw
+    $EditedContent = Get-ContentWithoutTrailingNewline -Path "$TempFile" -Raw
     Set-Clipboard -Value $EditedContent
     Remove-Item -Force -Path "$TempFile"
 } else {

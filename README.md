@@ -22,4 +22,8 @@ This repository is an updated version of [rahuliyer95's version](https://github.
 3. Edit the text and save the changes.
 4. The edited text will be automatically copied to the clipboard.
 
+To continuously copy the edited text without exiting the editor, use `keep_copy.ps1` instead of `run.ps1`.
 
+## Licenses
+
+MIT.
