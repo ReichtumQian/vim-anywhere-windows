@@ -11,7 +11,7 @@ This repository is an updated version of [rahuliyer95's version](https://github.
 **Installation**:
 
 1. Clone this repo and extract its content to a folder.
-2. Add your editor to `PATH` environment variable.
+2. (Optional) Add your editor to `PATH` environment variable.
 3. Update the `VimPath` variable in `run.ps1` to point to your editor's executable path.
 4. Run the `vim-anywhere.ahk` script.
 
